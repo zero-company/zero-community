@@ -20,13 +20,22 @@ node_modules
 
 # misc
 .DS_Store
+.idea
 *.pem
-*.log
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# debug
+# debug logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # local env files
 .env.local
@@ -45,4 +54,6 @@ yarn-error.log*
 
 # bundler
 dist
+dist-ssr
+*.local
 .rollup.cache
