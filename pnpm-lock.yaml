@@ -5,20 +5,20 @@ importers:
   .:
     specifiers:
       '@types/node': ^18.11.7
-      '@zero-company/prettier': workspace:latest
+      '@zero-company/zero-prettier': workspace:latest
       tailwindcss: ^3.2.4
       typescript: ^4.9.3
     dependencies:
       tailwindcss: 3.2.4
     devDependencies:
       '@types/node': 18.11.9
-      '@zero-company/prettier': link:packages/prettier
+      '@zero-company/zero-prettier': link:packages/zero-prettier
       typescript: 4.9.3
 
-  packages/prettier:
+  packages/zero-prettier:
     specifiers: {}
 
-  packages/publish:
+  packages/zero-publish:
     specifiers: {}
 
 packages:
