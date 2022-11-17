@@ -1,0 +1,15 @@
+{
+  "name": "@zero-company/zero-community",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "prettier": "@zero-company/prettier",
+  "scripts": {
+    "outdated": "outdated"
+  },
+  "devDependencies": {
+    "@zero-company/prettier": "workspace:latest",
+    "@types/node": "^18.11.7",
+    "typescript": "^4.9.3"
+  }
+}
