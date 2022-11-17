@@ -4018,3 +4018,10 @@ export const spectrumWireframe = {
     1400: colors['magenta-1400']['sets']['wireframe']['value'],
   },
 } as const
+
+export const spectrum = {
+  spectrumLight,
+  spectrumDark,
+  spectrumDarkest,
+  spectrumWireframe,
+}
