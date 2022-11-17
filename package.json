@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "prettier": "@zero-company/prettier",
+  "prettier": "@zero-company/zero-prettier",
   "scripts": {
     "outdated": "outdated"
   },
   "devDependencies": {
-    "@zero-company/prettier": "workspace:latest",
+    "@zero-company/zero-prettier": "workspace:latest",
     "@types/node": "^18.11.7",
     "typescript": "^4.9.3"
   }
