@@ -1,0 +1,8 @@
+{
+  "name": "@zero-company/zero-colors",
+  "version": "1.0.1",
+  "type": "module",
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
