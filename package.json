@@ -7,8 +7,8 @@
     "outdated": "outdated"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "@zero-company/zero-config": "workspace:latest",
-    "@types/node": "^18.11.7",
     "typescript": "^4.9.3"
   }
 }
