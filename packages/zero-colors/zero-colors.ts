@@ -24,7 +24,7 @@ export type ColorType<I extends IndexType> = Record<I[number], string>
 /**
  * Modified Tailwind + Material color palette
  */
-const zeroColors = {
+export const zeroColors = {
   ...tailwind,
   material,
   /** @deprecated As of zero-colors v1.0.1, single flat palettes are recommended. */
