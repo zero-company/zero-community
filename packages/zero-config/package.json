@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "exports": {
     "./zero-prettier": "./packages/zero-prettier/zero-prettier.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
