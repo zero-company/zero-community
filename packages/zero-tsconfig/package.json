@@ -1,5 +1,5 @@
 {
-  "name": "@zero-company/tsconfig",
+  "name": "@zero-company/zero-tsconfig",
   "version": "1.0.0",
   "private": true,
   "publishConfig": {

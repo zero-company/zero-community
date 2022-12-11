@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@zero-company/zero-config": "workspace:*",
-    "@zero-company/eslint-config-custom": "workspace:*",
+    "@zero-company/zero-eslint": "workspace:*",
     "typescript": "^4.9.4",
     "@types/node": "^18.11.13",
     "eslint": "^8.29.0",
