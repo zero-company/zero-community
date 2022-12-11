@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@zero-company/zero-config": "workspace:*",
+    "@zero-company/eslint-config-custom": "workspace:*",
     "typescript": "^4.9.4",
     "@types/node": "^18.11.13",
     "eslint": "^8.29.0",
-    "eslint-config-custom": "workspace:*",
     "prettier": "^2.8.1",
     "turbo": "^1.6.3"
   },

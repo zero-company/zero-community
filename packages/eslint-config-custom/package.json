@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-custom",
-  "version": "0.0.0",
+  "name": "@zero-company/eslint-config-custom",
+  "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.7",
