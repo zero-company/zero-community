@@ -1,9 +1,11 @@
+/**
+ * References
+ * https://www.npmjs.com/package/@zero-company/zero-community
+ * https://www.npmjs.com/package/@zero-company/zero-config
+ * https://github.com/zero-company/zero-community
+ */
+
 module.exports = {
-  _references: [
-    'https://www.npmjs.com/package/@zero-company/zero-community',
-    'https://www.npmjs.com/package/@zero-company/zero-config',
-    'https://github.com/zero-company/zero-community',
-  ],
   $schema: 'http://json.schemastore.org/prettierrc',
   trailingComma: 'all',
   endOfLine: 'lf',
