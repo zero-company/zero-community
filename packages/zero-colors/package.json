@@ -1,7 +1,9 @@
 {
   "name": "@zero-company/zero-colors",
   "version": "1.0.1",
-  "type": "module",
+  "scripts": {
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\""
+  },
   "dependencies": {
     "tailwindcss": "^3.2.4"
   }
