@@ -1,4 +1,6 @@
-# zero-community/zero-config/gitignore-v1
+# References
+# https://www.npmjs.com/package/@zero-company/zero-community
+# https://www.npmjs.com/package/@zero-company/zero-config
 # https://github.com/zero-company/zero-community
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -59,8 +61,9 @@ server/dist
 public/dist
 
 # bundler
-dist
-dist-ssr
+dist/
+dist-ssr/
+.output/
 *.local
 .rollup.cache
 
