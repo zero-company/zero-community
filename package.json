@@ -11,9 +11,9 @@
     "outdated": "outdated"
   },
   "devDependencies": {
-    "@zero-company/zero-config": "workspace:*",
-    "@zero-company/eslint-config": "workspace:*",
     "@types/node": "^18.11.13",
+    "@zero-company/eslint-config": "workspace:*",
+    "@zero-company/zero-config": "workspace:*",
     "cross-env": "^7.0.3",
     "eslint": "^8.29.0",
     "prettier": "^2.8.1",
