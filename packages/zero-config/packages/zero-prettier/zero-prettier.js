@@ -6,12 +6,12 @@
  */
 
 module.exports = {
-  $schema: 'http://json.schemastore.org/prettierrc',
-  trailingComma: 'all',
-  endOfLine: 'lf',
-  arrowParens: 'avoid',
-  tabWidth: 2,
-  semi: false,
-  singleQuote: true,
-  jsxSingleQuote: true,
+	$schema: 'http://json.schemastore.org/prettierrc',
+	trailingComma: 'all',
+	endOfLine: 'lf',
+	arrowParens: 'avoid',
+	tabWidth: 2,
+	semi: false,
+	singleQuote: true,
+	jsxSingleQuote: true,
 }
