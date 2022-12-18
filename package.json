@@ -11,11 +11,11 @@
     "outdated": "outdated"
   },
   "devDependencies": {
-    "@types/node": "^18.11.13",
+    "@types/node": "^18.11.17",
     "@zero-company/eslint-config": "workspace:*",
     "@zero-company/zero-config": "workspace:*",
     "cross-env": "^7.0.3",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "prettier": "^2.8.1",
     "turbo": "^1.6.3",
     "typescript": "^4.9.4"
