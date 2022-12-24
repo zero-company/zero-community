@@ -1,11 +1,14 @@
 {
   "name": "@zero-company/zero-colors",
   "version": "1.0.1",
+  "type": "module",
   "scripts": {
-    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\""
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
+    "build": "zero-bundler build --entry ./zero-colors.ts"
   },
   "dependencies": {
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "@zero-company/zero-bundler": "workspace:*"
   },
   "publishConfig": {
     "access": "public"
