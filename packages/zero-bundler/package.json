@@ -2,27 +2,32 @@
   "name": "@zero-company/zero-bundler",
   "version": "1.0.0",
   "type": "module",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/zero-bundler.cjs",
+  "module": "./dist/zero-bundler.js",
+  "types": "./dist/zero-bundler.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.umd.js",
-      "import": "./dist/index.es.js"
+      "require": "./dist/zero-bundler.cjs",
+      "import": "./dist/zero-bundler.js"
     }
+  },
+  "bin": {
+    "@zero-company/zero-bundler": "./dist/zero-bundler-cli.js",
+    "zero-bundler": "./dist/zero-bundler-cli.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "pack": "pnpm pack",
-    "build": "tsc && vite build",
-    "test": "ts-node --esm ./packages/zero-temp/sum.ts"
+    "build": "ts-node --esm ./packages/zero-bundler/build-self.ts"
   },
   "dependencies": {
+    "@types/inquirer": "^9.0.3",
     "@zero-company/zero-tsconfig": "workspace:*",
+    "commander": "^9.4.1",
+    "inquirer": "^9.1.4",
     "ts-node": "^10.9.1",
-    "vite": "^4.0.1",
-    "vite-plugin-dts": "^1.7.1"
+    "tsup": "^6.5.0"
   }
 }
