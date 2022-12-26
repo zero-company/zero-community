@@ -5,6 +5,7 @@
   "prettier": "@zero-company/zero-config/zero-prettier",
   "scripts": {
     "build": "turbo run build",
+    "build:force": "turbo run build --parallel --force",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "prettier:check": "prettier --check \"**/*.{ts,tsx,md}\"",
