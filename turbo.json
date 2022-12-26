@@ -5,6 +5,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "@zero-company/zero-colors#build": {
+      "dependsOn": ["^build", "@zero-company/zero-bundler#build"],
+      "outputs": ["dist/**"]
+    },
     "lint": {
       "outputs": []
     },
