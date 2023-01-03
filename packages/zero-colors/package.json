@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/zero-colors",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
