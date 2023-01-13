@@ -19,7 +19,6 @@
     "dist"
   ],
   "scripts": {
-    "pack": "pnpm pack",
     "build": "ts-node --esm ./packages/zero-bundler/build-self.ts"
   },
   "dependencies": {
