@@ -7,12 +7,18 @@
     "build": "turbo run build",
     "build:force": "turbo run build --parallel --force",
     "dev": "turbo run dev --parallel",
+    "test": "pnpm run build && turbo run test",
     "lint": "turbo run lint",
+    "changeset": "changeset",
+    "release": "pnpm run build && changeset publish",
+    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format",
     "prettier:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx,md}\"",
     "outdated": "outdated"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0",
     "@types/node": "^18.11.17",
     "@zero-company/eslint-config": "workspace:*",
     "@zero-company/zero-config": "workspace:*",
