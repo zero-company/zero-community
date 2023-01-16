@@ -12,8 +12,8 @@
     }
   },
   "bin": {
-    "@zero-company/zero-bundler": "./bin/zero-bundler-cli-proxy.js",
-    "zero-bundler": "./bin/zero-bundler-cli-proxy.js"
+    "@zero-company/zero-bundler": "./bin/zero-bundler-cli-proxy.cjs",
+    "zero-bundler": "./bin/zero-bundler-cli-proxy.cjs"
   },
   "files": [
     "dist"
