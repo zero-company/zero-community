@@ -9,10 +9,12 @@
       "dependsOn": ["^build", "@zero-company/zero-bundler#build"],
       "outputs": ["dist/**"]
     },
-    "lint": {
-      "outputs": []
-    },
+    "lint": {},
     "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
       "cache": false
     }
   }
