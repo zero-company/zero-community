@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./eslint-config.js",
   "dependencies": {
     "eslint-config-prettier": "^8.6.0",
