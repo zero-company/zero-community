@@ -1,20 +1,22 @@
 module.exports = {
+	extends: ['eslint:recommended', 'turbo', 'prettier'],
 	env: {
 		node: true,
+		es6: true,
 	},
-	parser: '@typescript-eslint/parser',
-	extends: [
-		'eslint:recommended',
-		'plugin:@typescript-eslint/recommended',
-		'prettier',
-	],
-	plugins: ['@typescript-eslint'],
 	parserOptions: {
+		ecmaVersion: 'latest',
 		sourceType: 'module',
-		ecmaVersion: 2020,
 	},
 	rules: {
-		'@typescript-eslint/no-non-null-assertion': 'off',
 		'linebreak-style': ['error', 'unix'],
 	},
+	overrides: [
+		{
+			files: ['**/__tests__/**/*'],
+			env: {
+				jest: true,
+			},
+		},
+	],
 }
