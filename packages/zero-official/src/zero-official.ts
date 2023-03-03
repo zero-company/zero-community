@@ -1,4 +1,4 @@
-export const ZeroOfficialLinks = {
+export const ZeroOfficial = {
 	github: 'https://github.com/zero-company',
 	website: 'https://zero-company.pages.dev',
 	patreon: 'https://www.patreon.com/ZeroCompany',
