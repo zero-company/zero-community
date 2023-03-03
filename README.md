@@ -21,7 +21,7 @@ https://github.com/zero-company/zero-community
 export const ZeroOfficial = {
 	github: 'https://github.com/zero-company',
 	website: 'https://zero-company.pages.dev',
-	patreon: 'https://www.patreon.com/ZeroCompany',
+	buymeacoffee: 'https://www.buymeacoffee.com/supportzero',
 	discord: 'https://discord.gg/2a5HcmxvgC',
 	twitter: 'https://twitter.com/ZeroComms',
 	facebook: 'https://facebook.com/ZeroComms',
