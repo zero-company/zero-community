@@ -1,0 +1,19 @@
+{
+  "name": "@zero-company/generate-id",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/generate-id.cjs",
+  "module": "./dist/generate-id.js",
+  "types": "./dist/generate-id.d.ts",
+  "scripts": {
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
+    "build": "zero-bundler build --entry ./src"
+  },
+  "dependencies": {
+    "@zero-company/zero-bundler": "^1.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
