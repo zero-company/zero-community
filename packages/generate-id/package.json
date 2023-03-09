@@ -10,8 +10,7 @@
     "build": "zero-bundler build --entry ./src"
   },
   "dependencies": {
-    "@zero-company/zero-bundler": "^1.0.1",
-    "ts-node": "^10.9.1"
+    "@zero-company/zero-bundler": "^1.0.1"
   },
   "publishConfig": {
     "access": "public"

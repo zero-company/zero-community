@@ -39,10 +39,8 @@ importers:
   packages/generate-id:
     specifiers:
       '@zero-company/zero-bundler': ^1.0.1
-      ts-node: ^10.9.1
     dependencies:
       '@zero-company/zero-bundler': link:../zero-bundler
-      ts-node: 10.9.1_alpjt73dvgv6kni625hu7f2l4m
 
   packages/zero-bundler:
     specifiers:
