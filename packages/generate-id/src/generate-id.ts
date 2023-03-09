@@ -19,8 +19,8 @@ export const generateId = ({
 	prefix = '',
 	suffix = '',
 	divider = '-',
-	hexLength = 4,
-	hexNum = 4,
+	hexLength = 6,
+	hexNum = 6,
 } = {}) => {
 	const hexes = [...Array(hexNum)].map(() =>
 		[...Array(hexLength)]
