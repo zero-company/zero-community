@@ -1,0 +1,19 @@
+{
+  "name": "@zero-company/zero-seed",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/zero-seed.cjs",
+  "module": "./dist/zero-seed.js",
+  "types": "./dist/zero-seed.ts",
+  "scripts": {
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
+    "build": "zero-bundler build --entry ./src"
+  },
+  "dependencies": {
+    "@zero-company/zero-bundler": "^1.0.1",
+    "fuse.js": "^6.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
