@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/zero-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": {
     "./zero-prettier": "./packages/zero-prettier/zero-prettier.js"
   },
