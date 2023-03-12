@@ -1,10 +1,14 @@
 import Fuse from 'fuse.js'
-import * as fs from 'fs'
+import * as fse from 'fs-extra'
 
-export const createSeed = ({ keys, data, outputDir = './dist/seed.json' }) => {
-	const seed = Fuse.createIndex(keys, data)
+export const createSeed = ({
+	keys,
+	data,
+	outputDir = './dist/seed/fuse-index.json',
+}) => {
+	const fuseIndex = Fuse.createIndex(keys, data)
 
-	return fs.promises
-		.writeFile(outputDir, JSON.stringify(seed.toJSON()))
+	return fse
+		.outputFile(outputDir, JSON.stringify(fuseIndex.toJSON()))
 		.then(() => console.log(`[zero-seed] Created ${outputDir}`))
 }
