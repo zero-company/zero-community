@@ -6,20 +6,20 @@ export const zodIndexTypeV1 = z.object({
 	// Required ZeroTypeVx zero-id
 	zeroTypeId: z.string(),
 	// Optional VersionTypeVx zero-id
-	zeroVersionId: z.string(),
+	zeroVersionId: z.optional(z.string()),
 	// Optional array of TagTypeVx zero-ids or strings
-	zeroTags: z.array(z.string()),
+	zeroTags: z.optional(z.array(z.string())),
 	// Required UserTypeVx zero-id
 	ownerId: z.string(),
 	// Optional array of UserTypeVx zero-ids
-	accessUpdateId: z.array(z.string()),
+	accessUpdateId: z.optional(z.array(z.string())),
 	// Optional array of UserTypeVx zero-ids
-	accessFetchId: z.array(z.string()),
+	accessFetchId: z.optional(z.array(z.string())),
 	// Required display name string
 	displayName: z.string(),
 	// Optional description string
-	description: z.string(),
-	// Required value
+	description: z.optional(z.string()),
+	// Optional value object
 	value: z.any(),
 })
 
