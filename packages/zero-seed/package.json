@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/zero-seed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "./dist/zero-seed.cjs",
   "module": "./dist/zero-seed.js",
