@@ -4,7 +4,7 @@
   "type": "module",
   "main": "./dist/zero-seed.cjs",
   "module": "./dist/zero-seed.js",
-  "types": "./dist/zero-seed.ts",
+  "types": "./dist/zero-seed.d.ts",
   "scripts": {
     "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
     "build": "zero-bundler build --entry ./src"
