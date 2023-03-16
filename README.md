@@ -6,7 +6,7 @@ Collection of open source packages.
 
 [Github](https://github.com/zero-company) •
 [Website](https://zero-company.pages.dev) •
-[Patreon](https://www.patreon.com/ZeroCompany) •
+[BuyMeACoffee](https://www.buymeacoffee.com/supportzero) •
 [Discord](https://discord.gg/2a5HcmxvgC) •
 [Twitter](https://twitter.com/ZeroComms) •
 [Facebook](https://facebook.com/ZeroComms)
