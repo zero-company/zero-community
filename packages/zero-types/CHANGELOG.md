@@ -1,5 +1,11 @@
 # @zero-company/zero-types
 
+## 1.0.4
+
+### Patch Changes
+
+- [#17](https://github.com/zero-company/zero-community/pull/17) [`8cf09f0`](https://github.com/zero-company/zero-community/commit/8cf09f0c54d46a9fe3e9cc9edc8fb7c8c755397d) Thanks [@jigz](https://github.com/jigz)! - [zero-types] Add tsconfig.json
+
 ## 1.0.3
 
 ### Patch Changes
