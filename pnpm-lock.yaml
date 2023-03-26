@@ -69,6 +69,14 @@ importers:
   packages/zero-config:
     specifiers: {}
 
+  packages/zero-official:
+    specifiers:
+      '@zero-company/zero-bundler': ^1.0.1
+      '@zero-company/zero-tsconfig': ^1.0.1
+    dependencies:
+      '@zero-company/zero-bundler': link:../zero-bundler
+      '@zero-company/zero-tsconfig': link:../zero-tsconfig
+
   packages/zero-seed:
     specifiers:
       '@zero-company/zero-bundler': ^1.0.1
