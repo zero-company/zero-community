@@ -1,4 +1,4 @@
-export const ZeroOfficial = {
+export const zeroOfficial = {
 	github: `https://github.com/zero-company`,
 	website: `https://zero-company.pages.dev`,
 	buymeacoffee: `https://www.buymeacoffee.com/supportzero`,
