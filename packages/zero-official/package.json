@@ -1,0 +1,19 @@
+{
+  "name": "@zero-company/zero-official",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/zero-official.cjs",
+  "module": "./dist/zero-official.js",
+  "types": "./dist/zero-official.d.ts",
+  "scripts": {
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
+    "build": "zero-bundler build --entry ./src"
+  },
+  "dependencies": {
+    "@zero-company/zero-bundler": "^1.0.1",
+    "@zero-company/zero-tsconfig": "^1.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
