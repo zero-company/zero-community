@@ -31,7 +31,7 @@ jobs:
         run: pnpm install
         env:
           # Ensure to have this set up under GitHub secrets
-          NPM_TOKEN: ${{ secrets.ZERO_NPM_TOKEN_V1 }}
+          NPM_TOKEN: ${{ secrets.ZERO_READONLY_NPM_TOKEN_V1 }}
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
@@ -45,6 +45,6 @@ jobs:
           title: '[ci] Release packages'
         env:
           GITHUB_TOKEN: ${{ secrets.ZERO_GITHUB_TOKEN_V1 }} # Ensure to have this set up under GitHub secrets
-          NPM_TOKEN: ${{ secrets.ZERO_NPM_TOKEN_V1 }} # Ensure to have this set up under GitHub secrets
+          NPM_TOKEN: ${{ secrets.ZERO_AUTOMATION_NPM_TOKEN_V1 }} # Ensure to have this set up under GitHub secrets
 
 
