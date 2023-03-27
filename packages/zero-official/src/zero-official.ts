@@ -8,4 +8,4 @@ export const zeroOfficial = {
 	email: `[Unavailable] Let's talk on discord`,
 	domain: `[Unavailable] Cybersquatters make it hard to find a domain`,
 	publicApi: `[Unavailable] Coming Soon`,
-}
+} as const
