@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/zero-official",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/zero-official.cjs",
   "module": "./dist/zero-official.js",
