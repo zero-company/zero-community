@@ -44,7 +44,7 @@ jobs:
           commit: '[ci] Release packages'
           title: '[ci] Release packages'
         env:
-          GITHUB_TOKEN: ${{ secrets.ZERO_GITHUB_TOKEN_V1 }} # Ensure to have this set up under GitHub secrets
+          GITHUB_TOKEN: ${{ secrets.ZERO_WRITE_GITHUB_TOKEN_V1 }} # Ensure to have this set up under GitHub secrets
           NPM_TOKEN: ${{ secrets.ZERO_AUTOMATION_NPM_TOKEN_V1 }} # Ensure to have this set up under GitHub secrets
 
 
