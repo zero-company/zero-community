@@ -69,3 +69,6 @@ dist-ssr/
 
 # zero
 /.zero/**/gitignore
+
+# astro
+.astro/
