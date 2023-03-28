@@ -33,7 +33,7 @@ importers:
       eslint-plugin-react: 7.32.2
     dependencies:
       eslint-config-prettier: 8.7.0_eslint@8.35.0
-      eslint-config-turbo: 0.0.10_eslint@8.35.0
+      eslint-config-turbo: 1.8.6_eslint@8.35.0
       eslint-plugin-react: 7.32.2_eslint@8.35.0
 
   packages/generate-id:
@@ -68,6 +68,16 @@ importers:
 
   packages/zero-config:
     specifiers: {}
+
+  packages/zero-docs:
+    specifiers:
+      '@zero-company/zero-bundler': ^1.0.1
+      '@zero-company/zero-tsconfig': ^1.0.1
+      '@zero-company/zero-types': ^1.0.4
+    dependencies:
+      '@zero-company/zero-bundler': 1.0.1_alpjt73dvgv6kni625hu7f2l4m
+      '@zero-company/zero-tsconfig': 1.0.1
+      '@zero-company/zero-types': 1.0.4_alpjt73dvgv6kni625hu7f2l4m
 
   packages/zero-official:
     specifiers:
@@ -687,7 +697,7 @@ packages:
     resolution: {integrity: sha512-YXygycs1nGv/3D0T755vHHccajucA7xsKpI/t5If8VciQ6+7duCJVOWWpX8y68GDASrl2UHjVmWsD+OHooU8xQ==}
     dependencies:
       eslint-config-prettier: 8.7.0_eslint@8.35.0
-      eslint-config-turbo: 0.0.10_eslint@8.35.0
+      eslint-config-turbo: 1.8.6_eslint@8.35.0
       eslint-plugin-react: 7.32.2_eslint@8.35.0
     transitivePeerDependencies:
       - eslint
@@ -718,6 +728,21 @@ packages:
 
   /@zero-company/zero-tsconfig/1.0.1:
     resolution: {integrity: sha512-mWHsG2JJwnGDdhAblOJMEunRXWuF8tI1csM+7ckRjJFj/ua4XbA37aluZgR6dhj/pKR+jNJT3M1jQHlNee1ptw==}
+    dev: false
+
+  /@zero-company/zero-types/1.0.4_alpjt73dvgv6kni625hu7f2l4m:
+    resolution: {integrity: sha512-oBRHjN/VUwewJXVyqqQnaE+gqfyLVZcdhnxWjp4CPRvtVJULphWwfZj+G2pXWwdkKyHrQ4FpBgDLbwE7EU/GNg==}
+    dependencies:
+      '@zero-company/zero-bundler': 1.0.1_alpjt73dvgv6kni625hu7f2l4m
+      '@zero-company/zero-tsconfig': 1.0.1
+      zod: 3.21.4
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - postcss
+      - supports-color
+      - typescript
     dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.2:
@@ -1388,13 +1413,13 @@ packages:
     dependencies:
       eslint: 8.35.0
 
-  /eslint-config-turbo/0.0.10_eslint@8.35.0:
-    resolution: {integrity: sha512-o4ULFZYM1OihSd63eDGEuy9rt6tW4ma6xnW9grnr44BoJwKaGQko2aka9kfqQs0vtmwD1++Os3ThPHETmzkFzA==}
+  /eslint-config-turbo/1.8.6_eslint@8.35.0:
+    resolution: {integrity: sha512-LSMqrHmFeQcYRuBnzrzw+B2bJ3+o8wxPkRwfK0Y+SSLsq2F/niRJ2kqB8j4uOSCfxybHHpFEB2CgUpQiiyfeoQ==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 8.35.0
-      eslint-plugin-turbo: 0.0.10_eslint@8.35.0
+      eslint-plugin-turbo: 1.8.6_eslint@8.35.0
 
   /eslint-plugin-react/7.32.2_eslint@8.35.0:
     resolution: {integrity: sha512-t2fBMa+XzonrrNkyVirzKlvn5RXzzPwRHtMvLAtVZrt8oxgnTQaYbU6SXTOO1mwQgp1y5+toMSKInnzGr0Knqg==}
@@ -1419,8 +1444,8 @@ packages:
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
 
-  /eslint-plugin-turbo/0.0.10_eslint@8.35.0:
-    resolution: {integrity: sha512-T7QRwF4rjBQCJD9AHLHn9ShtHCHNkfIZW5Oio92WtQYhoU5jZCU3ynU+ONFXLuvoUx4dJ19WergIyHL+DwL2+g==}
+  /eslint-plugin-turbo/1.8.6_eslint@8.35.0:
+    resolution: {integrity: sha512-LieXzur+4XtIsLst8GdupTMhvGn2ebFetG3AVErh2jHBy1EobPHbatjcdNZQMy5EsdG35axQVB8KFF3jo4u+OQ==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
