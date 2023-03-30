@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/generate-id",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/generate-id.cjs",
   "module": "./dist/generate-id.js",
