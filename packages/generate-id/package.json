@@ -5,12 +5,17 @@
   "main": "./dist/generate-id.cjs",
   "module": "./dist/generate-id.js",
   "types": "./dist/generate-id.d.ts",
+  "bin": {
+    "@zero-company/generate-id": "./bin/generate-id-cli-proxy.cjs",
+    "generate-id": "./bin/generate-id-cli-proxy.cjs"
+  },
   "scripts": {
     "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
     "build": "zero-bundler build --entry ./src"
   },
   "dependencies": {
-    "@zero-company/zero-bundler": "^1.0.1"
+    "@zero-company/zero-bundler": "^1.0.1",
+    "commander": "^10.0.0"
   },
   "publishConfig": {
     "access": "public"
