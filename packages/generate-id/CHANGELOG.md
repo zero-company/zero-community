@@ -1,5 +1,11 @@
 # @zero-company/generate-id
 
+## 1.0.2
+
+### Patch Changes
+
+- [#29](https://github.com/zero-company/zero-community/pull/29) [`2af304f`](https://github.com/zero-company/zero-community/commit/2af304f314f6f74ed09c421ecb9a55e94490e489) Thanks [@jigz](https://github.com/jigz)! - [generate-id] Add missing options
+
 ## 1.0.1
 
 ### Patch Changes
