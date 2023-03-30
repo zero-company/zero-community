@@ -16,7 +16,7 @@
     "prettier:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx,md}\"",
     "outdated": "outdated",
-    "generate-id": "generate-id"
+    "generate-id": "generate-id generate --prefix zero1"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
