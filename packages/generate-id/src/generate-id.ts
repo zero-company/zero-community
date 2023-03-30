@@ -1,17 +1,17 @@
 /**
- * Generate random hexadecimal id string
- * @param opts.hexLength - limits length of hex (default: 4)
- * @param opts.hexNum - specifies number of hexes (default: 1)
- * @param opts.prefix - adds prefix string
- * @param opts.suffix - adds suffix string
- * @param opts.divider - adds dividers (default: '-')
- * @returns res.hexes - returns generated hex array
- * @returns res.joined - returns joined string
+ * generate random hexadecimal id
+ * @param opts.hexLength - limit length of each hex (default: 6)
+ * @param opts.hexNum - specify number of hexes (default: 6)
+ * @param opts.prefix - add prefix
+ * @param opts.suffix - add suffix
+ * @param opts.divider - change divider (default: '-')
+ * @returns res.hexes - return hexes array
+ * @returns res.joined - return joined string
  * @example generateHexV1({ prefix: 'uid', hexNum: 4 })
  * ```
  * {
  *  hexes: [ "d596", "9fa3", "a415", "50ea" ],
- *  joined: "uid-d596-9fa3-a415-50ea"
+ *  joined: "prefix-d596-9fa3-a415-50ea-suffix"
  * }
  * ```
  */

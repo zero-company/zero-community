@@ -15,7 +15,11 @@ program
 program
 	.command('generate')
 	.description('output random id')
-	.option('--prefix <value>', 'Add prefix')
+	.option('--hexLength <value>', 'limit length of each hex (default: 6)')
+	.option('--hexNum <value>', 'specify number of hexes (default: 6)')
+	.option('--prefix <value>', 'add prefix')
+	.option('--suffix <value>', 'add suffix')
+	.option('--divider <value>', `change divider (default: '-')`)
 	.action(options => {
 		console.log(generateId(options))
 	})
