@@ -16,12 +16,12 @@ importers:
       '@zero-company/eslint-config':
         specifier: ^1.0.1
         version: 1.0.1(eslint@8.35.0)
-      '@zero-company/generate-id':
-        specifier: workspace:*
-        version: link:packages/generate-id
       '@zero-company/zero-config':
         specifier: ^1.0.0
         version: 1.0.1
+      '@zero-company/zero-id':
+        specifier: workspace:*
+        version: link:packages/zero-id
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -102,6 +102,18 @@ importers:
       '@zero-company/zero-types':
         specifier: ^1.0.4
         version: 1.0.4(@types/node@18.14.6)(typescript@4.9.5)
+
+  packages/zero-id:
+    dependencies:
+      '@zero-company/zero-bundler':
+        specifier: ^1.0.1
+        version: 1.0.1(@types/node@18.14.6)(typescript@4.9.5)
+      '@zero-company/zero-tsconfig':
+        specifier: ^1.0.1
+        version: 1.0.1
+      commander:
+        specifier: ^10.0.0
+        version: 10.0.0
 
   packages/zero-official:
     dependencies:

@@ -1,3 +1,11 @@
+type GenerateZeroIdOptions = {
+	prefix?: string
+	suffix?: string
+	divider?: string
+	hexLength?: number
+	hexNum?: number
+}
+
 /**
  * generate random hexadecimal id
  * @param opts.hexLength - limit length of each hex (default: 6)
@@ -7,21 +15,28 @@
  * @param opts.divider - change divider (default: '-')
  * @returns res.hexes - return hexes array
  * @returns res.joined - return joined string
- * @example generateHexV1({ prefix: 'uid', hexNum: 4 })
+ * @example generateZeroId({ prefix: 'uid1', hexNum: 4, hexLength: 6 })
  * ```
  * {
  *  hexes: [ "d596", "9fa3", "a415", "50ea" ],
- *  joined: "prefix-d596-9fa3-a415-50ea-suffix"
+ *  joined: "uid1-2fe4b7-d55a55-f13ced-2c1a82"
  * }
  * ```
  */
-export const generateId = ({
-	prefix = '',
-	suffix = '',
-	divider = '-',
-	hexLength = 6,
-	hexNum = 6,
-} = {}) => {
+export const generateZeroId = (opts?: GenerateZeroIdOptions) => {
+	const defaultOpts: GenerateZeroIdOptions = {
+		prefix: '',
+		suffix: '',
+		divider: '-',
+		hexLength: 6,
+		hexNum: 6,
+	}
+
+	const { prefix, suffix, divider, hexLength, hexNum } = {
+		...defaultOpts,
+		...opts,
+	}
+
 	const hexes = [...Array(hexNum)].map(() =>
 		[...Array(hexLength)]
 			.map(() => Math.floor(Math.random() * 16).toString(16))
