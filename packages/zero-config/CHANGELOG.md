@@ -1,5 +1,11 @@
 # @zero-company/zero-config
 
+## 1.0.4
+
+### Patch Changes
+
+- [#31](https://github.com/zero-company/zero-community/pull/31) [`ef1a788`](https://github.com/zero-company/zero-community/commit/ef1a7884f4d1cfd983143263b3f86789445af69d) Thanks [@jigz](https://github.com/jigz)! - [zero-config] Update .npmrc
+
 ## 1.0.3
 
 ### Patch Changes
