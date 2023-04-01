@@ -1,12 +1,12 @@
 {
-  "name": "@zero-company/pack-package",
+  "name": "@zero-company/pack-packages",
   "version": "1.0.0",
   "type": "module",
-  "main": "./dist/pack-package.cjs",
-  "module": "./dist/pack-package.js",
-  "types": "./dist/pack-package.d.ts",
+  "main": "./dist/pack-packages.cjs",
+  "module": "./dist/pack-packages.js",
+  "types": "./dist/pack-packages.d.ts",
   "bin": {
-    "pack-package": "./bin/cli-proxy.cjs"
+    "pack-packages": "./bin/cli-proxy.cjs"
   },
   "scripts": {
     "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
