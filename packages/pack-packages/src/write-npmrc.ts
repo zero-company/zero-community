@@ -42,9 +42,9 @@ export const writeNpmrc = ({
 		//${registryHost}/:_authToken=\${${authTokenEnvName}}
 	# [${packagejson.name}][end] Set registry
 `
-	const outputFile = path.join(outputPath, '.npmrc')
 
-	return fse
-		.outputFile(path.join(outputFile), data)
-		.then(() => console.log(`[${packagejson.name}] Created ${outputFile}`))
+	return Promise.all([
+		fse.outputFile(path.join(outputPath, '.npmrc'), data),
+		fse.outputFile(path.join(outputPath, 'package.json'), ''),
+	])
 }
