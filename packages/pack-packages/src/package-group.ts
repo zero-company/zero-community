@@ -17,7 +17,7 @@ export const findClosingBracket = (str: string, pos: any) => {
 
 export const packageGroupZod = z.object({
 	packages: z.string().startsWith('@').includes('/').array(),
-	registry: z.string().url(),
+	registryUrl: z.string().url(),
 	authTokenEnvName: z.string(),
 })
 
@@ -35,7 +35,7 @@ export const parsePackageGroupString = (
 	packageGroupIndex: number,
 ) => {
 	try {
-		const [packages, [registry, authTokenEnvName]] = packageGroupString
+		const [packages, [registryUrl, authTokenEnvName]] = packageGroupString
 			.replace(/\s+/g, '')
 			.split(/[\[\]]+/)
 			.filter(Boolean)
@@ -43,7 +43,7 @@ export const parsePackageGroupString = (
 
 		return {
 			packages,
-			registry,
+			registryUrl,
 			authTokenEnvName,
 		}
 	} catch (error) {
