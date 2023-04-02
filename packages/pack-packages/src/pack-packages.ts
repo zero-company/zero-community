@@ -25,7 +25,7 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 				.map(el => el.split('/')[0])
 
 			writeNpmrc({
-				outputPath: '.zero/pack-packages/gitignore',
+				outputPath: `.zero/pack-packages/gitignore/${index}`,
 				registryUrl,
 				scopes,
 				authTokenEnvName,
