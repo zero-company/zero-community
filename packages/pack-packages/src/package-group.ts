@@ -25,13 +25,15 @@ export type PackageGroupType = z.infer<typeof packageGroupZod> | string
 
 export type ValidPackageGroupType = z.infer<typeof packageGroupZod>
 
-export const isValidParsedPackageGroup = (parsedPackageGroup: any) =>
-	packageGroupZod.safeParse(parsedPackageGroup).success
+export const validatePackageGroup = (
+	packageGroup: any,
+): packageGroup is ValidPackageGroupType =>
+	packageGroupZod.safeParse(packageGroup).success
 
 export const parsePackageGroupString = (
 	packageGroupString: string,
 	packageGroupIndex: number,
-): any => {
+) => {
 	try {
 		const [packages, [registry, authTokenEnvName]] = packageGroupString
 			.replace(/\s+/g, '')
