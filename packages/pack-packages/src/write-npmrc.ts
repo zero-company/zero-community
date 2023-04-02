@@ -1,7 +1,6 @@
 import * as fse from 'fs-extra'
 import packagejson from './../package.json'
 import * as path from 'node:path'
-import * as url from 'node:url'
 
 type WriteNpmrcOptions = {
 	/** output path for .npmrc i.e. packages/mypackage */
@@ -31,7 +30,7 @@ export const writeNpmrc = ({
 	// TODO: Publish and use standard log package
 	// TODO: Check if env variable exists, if not warn
 
-	const { host: registryHost } = url.parse(registryUrl)
+	const { host: registryHost } = new URL(registryUrl)
 
 	const data = `
 	# [${packagejson.name}][start] Set registry, remove after use
