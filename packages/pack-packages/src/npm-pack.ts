@@ -6,4 +6,6 @@ type OptionsType = {
 }
 
 export const npmPack = ({ cwd, packages }: OptionsType) =>
-	execa('npm', ['pack', ...packages], { cwd })
+	execa('npm', ['pack', ...packages, '--pack-destination=./../'], {
+		cwd,
+	})
