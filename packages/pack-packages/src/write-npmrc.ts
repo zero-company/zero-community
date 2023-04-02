@@ -9,8 +9,8 @@ type WriteNpmrcOptions = {
 	registryUrl: string
 	/** name of env variable for authToken i.e. NPM_TOKEN, GITHUB_TOKEN */
 	authTokenEnvName: string
-	/** package scope i.e. \@username, \@org */
-	scope: string
+	/** array of package scopes i.e. [\@username, \@org] */
+	scopes: string[]
 }
 
 /**
@@ -18,13 +18,13 @@ type WriteNpmrcOptions = {
  *	@param opts.outputPath - output path for .npmrc i.e. packages/mypackage
  *	@param opts.registryUrl - registry to be used i.e. https://npm.pkg.github.com, https://registry.npmjs.org
  * 	@param opts.authTokenEnvName - name of env variable for authToken i.e. NPM_TOKEN, GITHUB_TOKEN
- * 	@param opts.scope - package scope i.e. \@username, \@org
+ * 	@param opts.scopes - array of package scopes i.e. [\@username, \@org]
  * 	@returns Promise from fs-extra
  */
 export const writeNpmrc = ({
 	outputPath,
 	registryUrl,
-	scope,
+	scopes,
 	authTokenEnvName,
 }: WriteNpmrcOptions) => {
 	// TODO: Publish and use standard log package
@@ -32,9 +32,13 @@ export const writeNpmrc = ({
 
 	const { host: registryHost } = new URL(registryUrl)
 
+	const parsedScopes = scopes
+		.map(scope => `${scope}:registry=${registryUrl}`)
+		.join('\n\t\t')
+
 	const data = `
 	# [${packagejson.name}][start] Set registry, remove after use
-		${scope}:registry=${registryUrl}
+		${parsedScopes}
 		//${registryHost}/:_authToken=\${${authTokenEnvName}}
 	# [${packagejson.name}][end] Set registry
 `
