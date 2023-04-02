@@ -48,7 +48,7 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 
 packPackages({
 	packageGroups: [
-		'[@zero-company/zero-assets, tsup],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN_V1',
+		'[@zero-company/zero-id],https://registry.npmjs.org,ZERO_READONLY_GITHUB_TOKEN_V1',
 		{
 			packages: ['@zero-company/zero-ui', 'tsup'],
 			registryUrl: 'https://npm.pkg.github.com',
