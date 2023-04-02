@@ -1,11 +1,12 @@
 import packagejson from './../package.json'
-import { writeNpmrc } from './write-npmrc'
-import { npmPack } from './npm-pack'
 import {
 	PackageGroupType,
 	parsePackageGroup,
 	validatePackageGroup,
 } from './package-group'
+import { writeNpmrc } from './write-npmrc'
+import { npmPack } from './npm-pack'
+import { cleanup } from './cleanup'
 
 export type PackPackagesOptions = {
 	packageGroups: PackageGroupType[]
@@ -32,7 +33,9 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 				registryUrl,
 				scopes,
 				authTokenEnvName,
-			}).then(() => npmPack({ cwd, packages }))
+			})
+				.then(() => npmPack({ cwd, packages }))
+				.then(() => cleanup(cwd))
 		} else {
 			console.error(
 				`[${
