@@ -1,5 +1,6 @@
 import packagejson from './../package.json'
 import { writeNpmrc } from './write-npmrc'
+import { npmPack } from './npm-pack'
 import {
 	PackageGroupType,
 	parsePackageGroup,
@@ -24,12 +25,14 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 				.filter(el => el.startsWith('@'))
 				.map(el => el.split('/')[0])
 
+			const cwd = `.zero/pack-packages/gitignore/package-group-${index}`
+
 			writeNpmrc({
-				outputPath: `.zero/pack-packages/gitignore/package-group-${index}`,
+				outputPath: cwd,
 				registryUrl,
 				scopes,
 				authTokenEnvName,
-			}).then(() => console.log('success', parsedPackageGroup))
+			}).then(() => npmPack({ cwd, packages }))
 		} else {
 			console.error(
 				`[${
@@ -44,7 +47,7 @@ packPackages({
 	packageGroups: [
 		'[@zero-company/zero-assets, tsup],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN_V1',
 		{
-			packages: ['@zero-company/zero-ui', '@zero-next', 'tsup'],
+			packages: ['@zero-company/zero-ui', 'tsup'],
 			registryUrl: 'https://npm.pkg.github.com',
 			authTokenEnvName: 'ZERO_READONLY_GITHUB_TOKEN_V1',
 		},
