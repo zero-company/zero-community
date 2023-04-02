@@ -2,7 +2,7 @@ import * as fse from 'fs-extra'
 import packagejson from './../package.json'
 import * as path from 'node:path'
 
-type WriteNpmjsOptions = {
+type WriteNpmrcOptions = {
 	/** output path for .npmrc i.e. packages/mypackage */
 	outputPath: string
 	/** registry to be used i.e. npm.pkg.github.com, registry.npmjs.org */
@@ -21,12 +21,12 @@ type WriteNpmjsOptions = {
  * 	@param opts.scope - package scope i.e. \@username, \@org
  * 	@returns Promise from fs-extra
  */
-export const writeNpmjs = ({
+export const writeNpmrc = ({
 	outputPath,
 	registry,
 	scope,
 	authTokenEnvName,
-}: WriteNpmjsOptions) => {
+}: WriteNpmrcOptions) => {
 	// TODO: Publish and use standard log package
 	// TODO: Check if env variable exists, if not warn
 	const data = `
