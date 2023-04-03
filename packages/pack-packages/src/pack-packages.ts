@@ -26,16 +26,16 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 				.filter(el => el.startsWith('@'))
 				.map(el => el.split('/')[0])
 
-			const cwd = `node_modules/.cache/zero/pack-packages/package-group-${index}`
+			const cacheDirectory = `node_modules/.cache/zero/pack-packages/package-group-${index}`
 
 			writeNpmrc({
-				outputPath: cwd,
+				outputPath: cacheDirectory,
 				registryUrl,
 				scopes,
 				authTokenEnvName,
 			})
-				.then(() => npmPack({ cwd, packages }))
-				.then(() => cleanup(cwd))
+				.then(() => npmPack({ cwd: cacheDirectory, packages }))
+				.then(() => cleanup(cacheDirectory))
 		} else {
 			console.error(
 				`[${
