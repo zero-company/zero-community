@@ -26,7 +26,7 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 				.filter(el => el.startsWith('@'))
 				.map(el => el.split('/')[0])
 
-			const cwd = `.zero/pack-packages/gitignore/package-group-${index}`
+			const cwd = `node_modules/.cache/zero/pack-packages/package-group-${index}`
 
 			writeNpmrc({
 				outputPath: cwd,
