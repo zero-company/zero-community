@@ -10,8 +10,7 @@
   },
   "scripts": {
     "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
-    "build": "zero-bundler build --entry ./src",
-    "test": "pnpm build && node ./dist/pack-packages.js"
+    "build": "zero-bundler build --entry ./src"
   },
   "dependencies": {
     "@zero-company/zero-bundler": "^1.0.1",
