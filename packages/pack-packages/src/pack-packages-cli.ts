@@ -13,9 +13,11 @@ program
 	.usage(
 		'"[@zero-company/zero-ui,tailwindcss],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN"',
 	)
+	.option('--nocleanup', 'keep PackageGroup directory')
 	.parse(process.argv)
 
-let paths = program.args
+const paths = program.args
+const opts = program.opts()
 
 if (!paths.length) {
 	console.log(`[${packagejson.name}] Need to provide at least one PackageGroup`)
@@ -24,6 +26,7 @@ if (!paths.length) {
 
 packPackages({
 	packageGroups: paths,
+	cleanup: !opts.nocleanup,
 })
 
 /*
