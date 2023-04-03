@@ -16,15 +16,17 @@ program
 	.option('--nocleanup', 'keep cached PackageGroup directory')
 	.parse(process.argv)
 
-const paths = program.args
+const packageGroups = program.args.map(
+	packageGroup => packageGroup.replace(/['"`]+/g, ''), // Fix quoted args
+)
 const opts = program.opts()
 
-if (!paths.length) {
+if (!packageGroups.length) {
 	console.log(`[${packagejson.name}] Need to provide at least one PackageGroup`)
 	process.exit(1)
 }
 
 packPackages({
-	packageGroups: paths,
+	packageGroups,
 	cleanup: !opts.nocleanup,
 })
