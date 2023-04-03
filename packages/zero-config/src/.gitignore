@@ -68,7 +68,7 @@ dist-ssr/
 .rollup.cache
 
 # zero
-/.zero/**/gitignore
+gitignore
 
 # astro
 .astro/
