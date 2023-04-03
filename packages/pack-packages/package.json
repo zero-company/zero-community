@@ -1,6 +1,6 @@
 {
   "name": "@zero-company/pack-packages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "./dist/pack-packages.cjs",
   "module": "./dist/pack-packages.js",
