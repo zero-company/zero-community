@@ -10,13 +10,15 @@ program
 	.description(
 		`${packagejson.name}@${packagejson.version}: Pack packages in tgz`,
 	)
-	.usage('[options] <path1> [morePaths ...]')
+	.usage(
+		'"[@zero-company/zero-ui,tailwindcss],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN"',
+	)
 	.parse(process.argv)
 
 let paths = program.args
 
 if (!paths.length) {
-	console.log(`[${packagejson.name}] Need to provide at least one path.`)
+	console.log(`[${packagejson.name}] Need to provide at least one PackageGroup`)
 	process.exit(1)
 }
 

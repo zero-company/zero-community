@@ -13,10 +13,12 @@ export const packPackageGroup = ({
 	packageGroup,
 	index,
 	cacheDirectory,
+	cleanup = true,
 }: {
 	packageGroup: PackageGroupType
 	index: number
 	cacheDirectory: string
+	cleanup?: boolean
 }) =>
 	new Promise<void>((resolve, reject) => {
 		const parsedPackageGroup = parsePackageGroup(packageGroup, index)
@@ -35,7 +37,9 @@ export const packPackageGroup = ({
 				authTokenEnvName,
 			})
 				.then(() => npmPack({ cwd, packages }))
-				.then(() => fse.remove(cwd))
+				.then(() => {
+					cleanup && fse.remove(cwd)
+				})
 				.then(() => resolve())
 		} else {
 			reject(`[${packagejson.name}] Failed to pack PackageGroup[${index}]`)
