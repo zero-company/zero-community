@@ -29,14 +29,3 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 			console.log(error)
 		})
 }
-
-packPackages({
-	packageGroups: [
-		'[@zero-company/zero-id],https://registry.npmjs.org,ZERO_READONLY_GITHUB_TOKEN_V1',
-		{
-			packages: ['@zero-company/zero-ui@1.0.0', 'tsup'],
-			registryUrl: 'https://npm.pkg.github.com',
-			authTokenEnvName: 'ZERO_READONLY_GITHUB_TOKEN_V1',
-		},
-	],
-})
