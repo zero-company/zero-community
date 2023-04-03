@@ -11,7 +11,7 @@ program
 		`${packagejson.name}@${packagejson.version}: Pack packages in tgz`,
 	)
 	.usage(
-		'"[@zero-company/zero-ui,tailwindcss],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN"',
+		`'[@zero-company/zero-ui,tailwindcss],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN'`,
 	)
 	.option('--nocleanup', 'keep cached PackageGroup directory')
 	.parse(process.argv)
