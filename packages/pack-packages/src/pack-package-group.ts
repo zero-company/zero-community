@@ -40,4 +40,6 @@ export const packPackageGroup = ({
 		} else {
 			reject(`[${packagejson.name}] Failed to pack PackageGroup[${index}]`)
 		}
+	}).catch(error => {
+		console.log(error)
 	})

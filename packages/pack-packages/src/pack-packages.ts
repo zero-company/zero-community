@@ -25,7 +25,4 @@ export const packPackages = ({ packageGroups }: PackPackagesOptions) => {
 			console.log(`[${packagejson.name}] Finished packing`)
 			return res
 		})
-		.catch(error => {
-			console.log(error)
-		})
 }

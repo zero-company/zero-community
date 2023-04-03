@@ -21,6 +21,12 @@ if (!paths.length) {
 }
 
 packPackages({
+	packageGroups: paths,
+})
+
+/*
+
+packPackages({
 	packageGroups: [
 		'[@zero-company/zero-id],https://registry.npmjs.org,ZERO_READONLY_GITHUB_TOKEN_V1',
 		{
@@ -30,3 +36,4 @@ packPackages({
 		},
 	],
 })
+*/
