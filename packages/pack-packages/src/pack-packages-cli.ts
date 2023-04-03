@@ -13,7 +13,7 @@ program
 	.usage(
 		'"[@zero-company/zero-ui,tailwindcss],https://npm.pkg.github.com,ZERO_READONLY_GITHUB_TOKEN"',
 	)
-	.option('--nocleanup', 'keep PackageGroup directory')
+	.option('--nocleanup', 'keep cached PackageGroup directory')
 	.parse(process.argv)
 
 const paths = program.args
@@ -28,17 +28,3 @@ packPackages({
 	packageGroups: paths,
 	cleanup: !opts.nocleanup,
 })
-
-/*
-
-packPackages({
-	packageGroups: [
-		'[@zero-company/zero-id],https://registry.npmjs.org,ZERO_READONLY_GITHUB_TOKEN_V1',
-		{
-			packages: ['@zero-company/zero-ui@1.0.0', 'tsup'],
-			registryUrl: 'https://npm.pkg.github.com',
-			authTokenEnvName: 'ZERO_READONLY_GITHUB_TOKEN_V1',
-		},
-	],
-})
-*/
