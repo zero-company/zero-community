@@ -1,7 +1,8 @@
 import { build, Options } from 'tsup'
 
-export const buildTsup = ({ entry }: Options) =>
+export const buildTsup = ({ entry = ['src'] }: Options) =>
 	build({
+		publicDir: './public',
 		entry,
 		clean: true,
 		splitting: true,
