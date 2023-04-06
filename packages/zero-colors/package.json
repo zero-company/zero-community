@@ -7,8 +7,10 @@
     "build": "zero-bundler build --entry ./zero-colors.ts"
   },
   "dependencies": {
-    "tailwindcss": "^3.2.4",
-    "@zero-company/zero-bundler": "workspace:*"
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "@zero-company/zero-bundler": "^1.0.1"
   },
   "publishConfig": {
     "access": "public"
