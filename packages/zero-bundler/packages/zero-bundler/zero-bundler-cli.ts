@@ -10,7 +10,7 @@ program
 
 program
 	.command('build')
-	.requiredOption('--entry [paths...]', 'path of entry files')
+	.option('--entry [paths...]', 'paths of entry files (default: src)')
 	.action(opts => {
 		build({
 			entry: opts.entry,
