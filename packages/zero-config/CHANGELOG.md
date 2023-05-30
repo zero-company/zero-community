@@ -1,5 +1,11 @@
 # @zero-company/zero-config
 
+## 1.0.8
+
+### Patch Changes
+
+- [#45](https://github.com/zero-company/zero-community/pull/45) [`a9ec2ee`](https://github.com/zero-company/zero-community/commit/a9ec2ee52075207329c5113ea5107a26409ddc38) Thanks [@jigz](https://github.com/jigz)! - [zero-config] Update .gitignore
+
 ## 1.0.7
 
 ### Patch Changes
