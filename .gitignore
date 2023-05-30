@@ -74,3 +74,14 @@ gitignore
 
 # astro
 .astro/
+
+# cargo
+/target/
+
+# tauri
+/dist/
+/target/
+/Cargo.lock
+
+# rustfmt
+**/*.rs.bk
