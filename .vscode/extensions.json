@@ -41,7 +41,9 @@
     "graphql.vscode-graphql-syntax",
     "unifiedjs.vscode-mdx",
     "prisma.prisma",
-    "EditorConfig.EditorConfig"
+    "EditorConfig.EditorConfig",
+    "rust-lang.rust-analyzer",
+    "tauri-apps.tauri-vscode"
   ],
   "unwantedRecommendations": []
 }
