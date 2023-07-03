@@ -68,6 +68,8 @@ dist-ssr/
 .output/
 *.local
 .rollup.cache
+.cache
+.parcel-cache
 
 # zero
 gitignore
