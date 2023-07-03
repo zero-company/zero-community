@@ -1,0 +1,10 @@
+[workspace]
+members = [
+  "crates/zero-rust",
+]
+
+[workspace.package]
+version = "1.0.0"
+
+[workspace.dependencies]
+wasm-pack = { version = "0.11.1", features = [] }
