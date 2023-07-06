@@ -1,0 +1,35 @@
+{
+  "git.detectSubmodulesLimit": 20,
+  "editor.foldingImportsByDefault": true,
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "editor.glyphMargin": false,
+  "editor.lineNumbers": "off",
+  "window.zoomLevel": -2,
+  "editor.fontSize": 16,
+  "workbench.startupEditor": "welcomePage",
+  "editor.minimap.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "git.followTagsWhenSync": true,
+  "git.showActionButton": {
+    "commit": false,
+    "publish": false,
+    "sync": false
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "deno.unstable": true,
+  "deno.enablePaths": ["deno"],
+  "gitlens.plusFeatures.enabled": false,
+  "files.autoSave": "afterDelay",
+  "git.postCommitCommand": "push",
+  "scm.defaultViewSortKey": "path",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "files.eol": "\n",
+  "editor.lightbulb.enabled": false,
+  "css.lint.unknownAtRules": "ignore",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "emmet.includeLanguages": {
+    "rust": "html"
+  }
+}
