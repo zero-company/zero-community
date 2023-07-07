@@ -22,9 +22,11 @@ next-env.d.ts
 # production
 /build
 
-# misc
+# System Files
 .DS_Store
-.idea
+Thumbs.db
+
+# misc
 *.pem
 *.suo
 *.ntvs*
@@ -87,3 +89,10 @@ Cargo.lock
 
 # rustfmt
 **/*.rs.bk
+
+# solid-start
+worker
+.solid
+.output
+.vercel
+.netlify
