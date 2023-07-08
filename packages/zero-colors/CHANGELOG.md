@@ -1,5 +1,11 @@
 # @zero-company/zero-colors
 
+## 1.0.3
+
+### Patch Changes
+
+- [#51](https://github.com/zero-company/zero-community/pull/51) [`ef735dc`](https://github.com/zero-company/zero-community/commit/ef735dc61b9510c123dac5171865e4734f579887) Thanks [@jigz](https://github.com/jigz)! - [zero-colors] Update zero-colors.ts
+
 ## 1.0.2
 
 ### Patch Changes
