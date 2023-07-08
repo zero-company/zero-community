@@ -1,5 +1,11 @@
 # @zero-company/zero-colors
 
+## 1.0.4
+
+### Patch Changes
+
+- [#53](https://github.com/zero-company/zero-community/pull/53) [`bb9865d`](https://github.com/zero-company/zero-community/commit/bb9865dc32c22a4d2db05e7264dedd7a610b2732) Thanks [@jigz](https://github.com/jigz)! - [zero-colors] Update package.json
+
 ## 1.0.3
 
 ### Patch Changes
