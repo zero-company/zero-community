@@ -2,6 +2,9 @@
   "name": "@zero-company/zero-colors",
   "version": "1.0.3",
   "type": "module",
+  "main": "./dist/zero-colors.cjs",
+  "module": "./dist/zero-colors.js",
+  "types": "./dist/zero-colors.d.ts",
   "scripts": {
     "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
     "build": "zero-bundler build --entry src/zero-colors.ts"
