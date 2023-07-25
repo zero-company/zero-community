@@ -96,3 +96,6 @@ worker
 .output
 .vercel
 .netlify
+
+# cloudflare functions on root
+/functions
