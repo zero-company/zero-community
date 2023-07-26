@@ -4,8 +4,8 @@ export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ZeroType: T) => {
 	return z.object({
 		// Universally unique zero-id, prefix zerox-xxxxxx, generated and reserved on server side
 		zeroId: z.string(),
-		// Valid ZeroTypeVx zero-id
-		typeId: z.string(),
+		// Valid ZeroTypeVx
+		zeroType: z.string(),
 		// Optional valid VersionTypeVx zero-id
 		versionId: z.optional(z.string()),
 		// Optional valid TagTypeVx zero-ids or string
@@ -33,7 +33,7 @@ export type ZeroIndexV1Type = z.infer<typeof ZeroIndexV1Zod>
 
 export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
 	zeroId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
-	typeId: 'UserTypeV1',
+	zeroType: 'UserTypeV1',
 	versionId: undefined,
 	tagsId: undefined,
 	ownerId: 'zero1-405f3b-1aab36-6bbd0b-44bfe7-6c8eb9-2a0338',
@@ -45,4 +45,9 @@ export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
 		firstName: 'John Doe',
 	},
 	expirationDate: new Date('2022-01-12T00:00:00.000Z'),
+}
+
+export const ZeroIndexV1 = {
+	zeroId: 'zero1-fa85c5-018fbe-73e5db-16cf4b-5e261a-4f7d2c',
+	zeroType: 'ZeroTypeV1'
 }
