@@ -46,8 +46,3 @@ export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
 	},
 	expirationDate: new Date('2022-01-12T00:00:00.000Z'),
 }
-
-export const ZeroIndexV1 = {
-	zeroId: 'zero1-fa85c5-018fbe-73e5db-16cf4b-5e261a-4f7d2c',
-	zeroType: 'ZeroTypeV1'
-}
