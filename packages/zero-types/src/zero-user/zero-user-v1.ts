@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const ZeroUserV1 = z.object({
+export const ZeroUserV1Zod = z.object({
 	email: z.string(),
 	emailVerified: z.date(),
 	name: z.string(),
