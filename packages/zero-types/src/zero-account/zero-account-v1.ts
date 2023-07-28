@@ -13,5 +13,5 @@ export const ZeroAccountV1Zod = z.object({
 		}),
 	),
 	sex: z.optional(z.enum(['male', 'female'])),
-	password: z.string(),
+	passwordHash: z.string(),
 })
