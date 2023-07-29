@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { AccountV1ValuesType } from '../account/account-v1'
 
-export const createZeroIndexV1Zod = <T extends z.ZodType>(ValuesZod: T) => {
+export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ValuesZod: T) => {
 	return z.object({
 		// Universally unique zero-id, prefix zerox-xxxxxx, generated and reserved on server side
 		zeroId: z.string(),
@@ -21,22 +21,22 @@ export const createZeroIndexV1Zod = <T extends z.ZodType>(ValuesZod: T) => {
 		name: z.string(),
 		// Optional description
 		description: z.optional(z.string()),
-		// Optional value object
-		values: z.optional(ValuesZod),
+		// Required value
+		values: ValuesZod,
 		// Used by cleaning purge bot
 		expirationDate: z.optional(z.date()),
 	})
 }
 
-export const ZeroIndexV1Zod = createZeroIndexV1Zod(z.string())
-export type ZeroIndexV1Type = z.infer<typeof ZeroIndexV1Zod>
+export const ZeroIndexV1Zod = createZeroIndexV1Zod(z.any())
+export type ZeroIndexV1Type<T = any> = Omit<
+	z.infer<typeof ZeroIndexV1Zod>,
+	'values'
+> & {
+	values: T
+}
 
-export type ZeroIndexV2Type<T extends z.ZodType> = ReturnType<
-	typeof createZeroIndexV1Zod<T>
->
-export type ZeroIndexV3Type<T> = z.infer<ZeroIndexV2Type<z.ZodType<T>>>
-
-export const ZeroIndexV1TestSeed: ZeroIndexV3Type<AccountV1ValuesType> = {
+export const ZeroIndexV1TestSeed: ZeroIndexV1Type<AccountV1ValuesType> = {
 	zeroId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
 	zeroType: 'AccountV1',
 	versionId: undefined,
