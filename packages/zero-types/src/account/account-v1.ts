@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const ZeroAccountV1Zod = z.object({
+const Fields = {
 	email: z.string(),
 	emailVerified: z.optional(z.date()),
 	userName: z.string(),
@@ -14,4 +14,13 @@ export const ZeroAccountV1Zod = z.object({
 	),
 	sex: z.optional(z.enum(['male', 'female'])),
 	passwordHash: z.string(),
+}
+
+export const AccountV1Zod = z.object({
+	id: z.string(),
+	...Fields,
+})
+
+export const ZeroAccountV1Zod = z.object({
+	...Fields,
 })
