@@ -21,7 +21,7 @@ export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ZeroType: T) => {
 		// Optional description
 		description: z.optional(z.string()),
 		// Optional value object
-		value: z.optional(ZeroType),
+		values: z.optional(ZeroType),
 		// Used by cleaning purge bot
 		expirationDate: z.optional(z.date()),
 	})
@@ -33,7 +33,7 @@ export type ZeroIndexV1Type = z.infer<typeof ZeroIndexV1Zod>
 
 export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
 	zeroId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
-	zeroType: 'UserTypeV1',
+	zeroType: 'AccountV1',
 	versionId: undefined,
 	tagsId: undefined,
 	ownerId: 'zero1-405f3b-1aab36-6bbd0b-44bfe7-6c8eb9-2a0338',
@@ -41,8 +41,8 @@ export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
 	accessFetchId: undefined,
 	name: '',
 	description: '',
-	value: {
-		firstName: 'John Doe',
+	values: {
+		userName: 'John',
 	},
 	expirationDate: new Date('2022-01-12T00:00:00.000Z'),
 }
