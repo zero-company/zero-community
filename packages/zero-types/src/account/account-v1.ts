@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const AccountV1ZodValues = {
+export const AccountV1ValuesZod = z.object({
 	email: z.string(),
 	emailVerified: z.optional(z.date()),
 	userName: z.string(),
@@ -14,9 +14,12 @@ export const AccountV1ZodValues = {
 	),
 	sex: z.optional(z.enum(['male', 'female'])),
 	passwordHash: z.string(),
-}
-
-export const AccountV1Zod = z.object({
-	id: z.string(),
-	...AccountV1ZodValues,
 })
+export type AccountV1ValuesType = z.infer<typeof AccountV1ValuesZod>
+
+export const AccountV1Zod = z
+	.object({
+		id: z.string(),
+	})
+	.merge(AccountV1ValuesZod)
+export type AccountV1Type = z.infer<typeof AccountV1Zod>
