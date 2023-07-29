@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-const Fields = {
+export const AccountV1ZodValues = {
 	email: z.string(),
 	emailVerified: z.optional(z.date()),
 	userName: z.string(),
@@ -18,9 +18,5 @@ const Fields = {
 
 export const AccountV1Zod = z.object({
 	id: z.string(),
-	...Fields,
-})
-
-export const ZeroAccountV1Zod = z.object({
-	...Fields,
+	...AccountV1ZodValues,
 })
