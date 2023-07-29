@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ZeroType: T) => {
+export const createZeroIndexV1Zod = <T extends z.ZodType>(ValuesZod: T) => {
 	return z.object({
 		// Universally unique zero-id, prefix zerox-xxxxxx, generated and reserved on server side
 		zeroId: z.string(),
@@ -21,13 +21,13 @@ export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ZeroType: T) => {
 		// Optional description
 		description: z.optional(z.string()),
 		// Optional value object
-		values: z.optional(ZeroType),
+		values: z.optional(ValuesZod),
 		// Used by cleaning purge bot
 		expirationDate: z.optional(z.date()),
 	})
 }
 
-export const ZeroIndexV1Zod = createZeroIndexV1Zod(z.any())
+export const ZeroIndexV1Zod = createZeroIndexV1Zod(z.string())
 
 export type ZeroIndexV1Type = z.infer<typeof ZeroIndexV1Zod>
 
@@ -41,8 +41,6 @@ export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
 	accessFetchId: undefined,
 	name: '',
 	description: '',
-	values: {
-		userName: 'John',
-	},
+	values: 'test',
 	expirationDate: new Date('2022-01-12T00:00:00.000Z'),
 }
