@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { AccountV1ValuesType } from '../account/account-v1'
 
 export const createZeroIndexV1Zod = <T extends z.ZodType>(ValuesZod: T) => {
 	return z.object({
@@ -28,10 +29,14 @@ export const createZeroIndexV1Zod = <T extends z.ZodType>(ValuesZod: T) => {
 }
 
 export const ZeroIndexV1Zod = createZeroIndexV1Zod(z.string())
-
 export type ZeroIndexV1Type = z.infer<typeof ZeroIndexV1Zod>
 
-export const ZeroIndexV1TestSeed: ZeroIndexV1Type = {
+export type ZeroIndexV2Type<T extends z.ZodType> = ReturnType<
+	typeof createZeroIndexV1Zod<T>
+>
+export type ZeroIndexV3Type<T> = z.infer<ZeroIndexV2Type<z.ZodType<T>>>
+
+export const ZeroIndexV1TestSeed: ZeroIndexV3Type<AccountV1ValuesType> = {
 	zeroId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
 	zeroType: 'AccountV1',
 	versionId: undefined,
