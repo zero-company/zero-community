@@ -1,5 +1,11 @@
 # @zero-company/zero-types
 
+## 1.0.5
+
+### Patch Changes
+
+- [#57](https://github.com/zero-company/zero-community/pull/57) [`56d321f`](https://github.com/zero-company/zero-community/commit/56d321f86b2ec38e4b5562e44f2a5b605a56872f) Thanks [@jigz](https://github.com/jigz)! - [zero-types] Update types
+
 ## 1.0.4
 
 ### Patch Changes
