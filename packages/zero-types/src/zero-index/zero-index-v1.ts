@@ -41,11 +41,15 @@ export const ZeroIndexV1TestSeed: ZeroIndexV1Type<AccountV1ValuesType> = {
 	zeroType: 'AccountV1',
 	versionId: undefined,
 	tagsId: undefined,
-	ownerId: 'zero1-405f3b-1aab36-6bbd0b-44bfe7-6c8eb9-2a0338',
+	ownerId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
 	accessUpdateId: undefined,
 	accessFetchId: undefined,
-	name: '',
+	name: 'John Doe Account',
 	description: '',
-	values: 'test',
+	values: {
+		email: 'example@test.com',
+		userName: 'John Doe',
+		passwordHash: '',
+	},
 	expirationDate: new Date('2022-01-12T00:00:00.000Z'),
 }
