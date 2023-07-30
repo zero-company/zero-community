@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { AccountV1ValuesType } from '../account/account-v1'
 
 export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ValuesZod: T) => {
 	return z.object({
@@ -34,22 +33,4 @@ export type ZeroIndexV1Type<T = any> = Omit<
 	'values'
 > & {
 	values: T
-}
-
-export const ZeroIndexV1TestSeed: ZeroIndexV1Type<AccountV1ValuesType> = {
-	zeroId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
-	zeroType: 'AccountV1',
-	versionId: undefined,
-	tagsId: undefined,
-	ownerId: 'zero1-16aa78-9a063c-2e3c59-8e642c-c391ab-403135',
-	accessUpdateId: undefined,
-	accessFetchId: undefined,
-	name: 'John Doe Account',
-	description: '',
-	values: {
-		email: 'example@test.com',
-		userName: 'John Doe',
-		passwordHash: '',
-	},
-	expirationDate: new Date('2022-01-12T00:00:00.000Z'),
 }
