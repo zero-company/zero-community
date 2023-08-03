@@ -15,7 +15,6 @@ export const createZeroIndexV1Zod = <T extends z.ZodTypeAny>(ValuesZod: T) => {
 		tagsId: z.optional(z.array(z.string())),
 		zeroType: z.string(),
 		values: ValuesZod,
-
 	})
 }
 
