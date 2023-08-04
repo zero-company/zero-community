@@ -1,5 +1,11 @@
 # @zero-company/zero-types
 
+## 1.0.6
+
+### Patch Changes
+
+- [#59](https://github.com/zero-company/zero-community/pull/59) [`4905b28`](https://github.com/zero-company/zero-community/commit/4905b2833c53f5b0b558f1ca1e3eacaf2fa11b61) Thanks [@jigz](https://github.com/jigz)! - [zero-types] Update ZeroIndexV1
+
 ## 1.0.5
 
 ### Patch Changes
