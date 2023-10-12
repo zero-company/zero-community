@@ -2,10 +2,14 @@
   "name": "@zero-company/redirect-site",
   "version": "1.0.0",
   "scripts": {
+    "build": "parcel build src/index.html",
     "serve": "parcel src/index.html"
   },
   "devDependencies": {
     "parcel": "^2.10.0",
     "@zero-company/zero-tsconfig": "^1.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
