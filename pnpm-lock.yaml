@@ -61,7 +61,7 @@ importers:
   packages/redirect-site:
     specifiers:
       '@zero-company/zero-tsconfig': ^1.0.1
-      parcel: 2.10.0
+      parcel: ^2.10.0
     devDependencies:
       '@zero-company/zero-tsconfig': 1.0.1
       parcel: 2.10.0
