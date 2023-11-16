@@ -1,7 +1,5 @@
 [workspace]
-members = [
-  "crates/zero-rust",
-]
+members = ["packages/*"]
 
 [workspace.package]
 version = "1.0.0"
