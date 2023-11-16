@@ -3,5 +3,5 @@ pub fn run() {
 }
 
 pub fn greet(name: &str) -> String {
-    format!("Hello, {name}!")
+    format!("Hello {name}!")
 }
