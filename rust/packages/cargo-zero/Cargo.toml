@@ -1,0 +1,11 @@
+[package]
+name = "cargo-zero"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "zero-community rust crates"
+homepage = "https://zero-company.pages.dev/"
+repository = "https://github.com/zero-company/zero-community"
+readme = "./../../../README.md"
+
+[dependencies]

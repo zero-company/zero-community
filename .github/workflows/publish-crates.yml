@@ -35,8 +35,8 @@ jobs:
           ZERO_PUBLISHONLY_CRATES_TOKEN_V1: ${{ secrets.ZERO_PUBLISHONLY_CRATES_TOKEN_V1 }}
         working-directory: ./rust
 
-      - name: Publish zero-rust
-        run: cargo publish --token ${ZERO_PUBLISHONLY_CRATES_TOKEN_V1} --package zero-rust
+      - name: Publish cargo-zero
+        run: cargo publish --token ${ZERO_PUBLISHONLY_CRATES_TOKEN_V1} --package cargo-zero
         env:
           ZERO_PUBLISHONLY_CRATES_TOKEN_V1: ${{ secrets.ZERO_PUBLISHONLY_CRATES_TOKEN_V1 }}
         working-directory: ./rust
