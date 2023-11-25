@@ -24,20 +24,10 @@ jobs:
           override: true
 
       - name: Publish cargo-zero
-        run: cargo publish --token ${ZERO_PUBLISHONLY_CRATES_TOKEN_V1} --package cargo-zero --keep-going
+        run: cargo publish --token ${ZERO_PUBLISHONLY_CRATES_TOKEN_V1} --package cargo-zero
         env:
           ZERO_PUBLISHONLY_CRATES_TOKEN_V1: ${{ secrets.ZERO_PUBLISHONLY_CRATES_TOKEN_V1 }}
         working-directory: ./rust
+        continue-on-error: true
 
-      - name: Publish zero-company
-        run: cargo publish --token ${ZERO_PUBLISHONLY_CRATES_TOKEN_V1} --package zero-company --keep-going
-        env:
-          ZERO_PUBLISHONLY_CRATES_TOKEN_V1: ${{ secrets.ZERO_PUBLISHONLY_CRATES_TOKEN_V1 }}
-        working-directory: ./rust
-
-      - name: Publish zero-community
-        run: cargo publish --token ${ZERO_PUBLISHONLY_CRATES_TOKEN_V1} --package zero-community --keep-going
-        env:
-          ZERO_PUBLISHONLY_CRATES_TOKEN_V1: ${{ secrets.ZERO_PUBLISHONLY_CRATES_TOKEN_V1 }}
-        working-directory: ./rust
 
