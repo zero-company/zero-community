@@ -1,5 +1,11 @@
 # @zero-company/zero-config
 
+## 1.0.12
+
+### Patch Changes
+
+- [#64](https://github.com/zero-company/zero-community/pull/64) [`191f501`](https://github.com/zero-company/zero-community/commit/191f50119413a5ce2752e8d6b8db548cefc3dc8b) Thanks [@jigz](https://github.com/jigz)! - [zero-config] Update .gitignore
+
 ## 1.0.11
 
 ### Patch Changes
