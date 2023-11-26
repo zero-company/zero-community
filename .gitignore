@@ -85,7 +85,11 @@ target/
 # tauri
 dist/
 target/
-Cargo.lock
+
+# playwright
+test-results/
+end2end/playwright-report/
+playwright/.cache/
 
 # rustfmt
 **/*.rs.bk
