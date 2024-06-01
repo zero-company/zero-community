@@ -103,3 +103,6 @@ worker
 
 # cloudflare functions on root
 /functions
+
+# database
+*.db
