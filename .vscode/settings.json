@@ -26,7 +26,7 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "files.eol": "\n",
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "css.lint.unknownAtRules": "ignore",
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "emmet.includeLanguages": {

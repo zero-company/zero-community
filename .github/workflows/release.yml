@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2.2.1
+        uses: pnpm/action-setup@v4.0.0
 
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
@@ -46,5 +46,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ZERO_WRITE_GITHUB_TOKEN_V1 }}
           NPM_TOKEN: ${{ secrets.ZERO_AUTOMATION_NPM_TOKEN_V1 }}
-
-
